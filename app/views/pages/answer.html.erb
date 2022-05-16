@@ -1,6 +1,6 @@
-<p> Your question </p>
 <%= params[:question]  %>
-<p> Coach Answer </p>
+
+<p> -You </p>
 <% if params[:question].include?('?') %>
 <%= 'Silly question, get dressed and go to work!'  %>
 <% elsif params[:question].capitalize == 'I am going to work' %>
@@ -8,3 +8,7 @@
 <% else %>
 <%= "I don't care, get dressed and go to work!" %>
 <% end %>
+
+<p> -Your coach </p>
+
+<%= link_to "Ask a new question", ask_path %>
